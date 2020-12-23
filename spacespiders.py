@@ -51,7 +51,7 @@ class wired_spider(scrapy.Spider):
         wired_responses = response.xpath('//*[@id="app-root"]/div/div/div/div/div/div/ul/li/div/a/h2/text()').getall()
         yield {'wired_responses' : wired_responses}
 
-vox.com spider       
+#vox.com spider       
 class vox_spider(scrapy.Spider):
     name = 'vox_spider'
     allowed_domains = ['vox.com']
@@ -66,8 +66,7 @@ class vox_spider(scrapy.Spider):
 
 #writes to .txt file and fixes broken parsing
 class fixer_writer:
-    
-    #replaces broken apostrophe parsing, other undesirables, and search query then saves in a new .txt file
+    #replaces broken apostrophe parsing, search query, other undesirables and saves in a new .txt file
     def replace_breaks(self):
         replace1 = str(searchquery + 's')
         replace2 = str(searchquery + "'s")
@@ -100,7 +99,6 @@ class fixer_writer:
             for i in vox_responses:
                 f.write(i + '\n')
         
-
 #runs QuoteSpider crawler from .py instead of shell
 if __name__ == '__main__':
     fixwri = fixer_writer()
