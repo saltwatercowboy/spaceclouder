@@ -1,5 +1,5 @@
 # Spaceclouder
-Spaceclouder is word cloud maker for space-related search queries.
+Spaceclouder is word cloud maker for space and popular science related topics. This was a learning project made to provide custom visualisations for pitch decks in a previous public relations role. 
 
 
 ## Use
